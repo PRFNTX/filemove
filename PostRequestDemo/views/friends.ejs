@@ -1,0 +1,13 @@
+<% include partials/header %>
+
+<ul>
+    <% for (var i=0;i<fList.length;i++){ %>
+    <li> <%= fList[i] %> </li>
+    <% } %>
+</ul>
+
+<form action="/addFriend" method="post">
+    <input type="text" name="name" placeholder="Name">
+    <button> Friend Get!</button>
+</form>
+<% include partials/footer %>

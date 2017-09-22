@@ -1,0 +1,15 @@
+<% include ../partials/header %>
+
+<h1> this is the show page for <%= campground.name %></h1>
+<img src="<%=campground.image%>">
+<p> <%=campground.description%></p>
+<div id="comments">
+    <% for(var i=0;i<campground.comments.length;i++){ %>
+       <div class="comment">
+           <h3><%=campground.comments[i].author%></h3>
+           <p><%=campground.comments[i].content%></p>
+       </div> 
+    <% } %>
+</div>
+<a href="/campgrounds/<%=campground._id%>/comments/new" class="btn btn-lg btn-success">Add Comment</a>
+<% include ../partials/footer %>
